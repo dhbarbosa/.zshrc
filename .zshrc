@@ -17,6 +17,7 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 autoload -Uz compinit && compinit
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="bg=#ff00ff,bold"
 
