@@ -21,4 +21,6 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="bg=#ff00ff,bold"
 
+alias ls="exa --icons"  
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
