@@ -19,11 +19,12 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 plugins=(
   git
   dotenv
   docker
+  zsh-autosuggestions
   thefuck
 )
 
