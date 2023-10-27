@@ -4,34 +4,29 @@ fi
 
 export NPM_CONFIG_PREFIX=~/.npm-global
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:$HOME/.cargo/bin:$HOME/.npm-global/bin:$HOME/.local/bin:$HOME/.config/apache-maven-3.9.4/bin
+export ZSH=$HOME/.oh-my-zsh
+export CPPFLAGS="-I/usr/local/opt/openjdk@17/include"
+export PATH="/usr/local/opt/openjdk@17/bin:$HOME/.local/bin:$PATH"
 export ZSH="$HOME/.oh-my-zsh"
-export LANG=pt_Br.UTF-8
 
-DISABLE_AUTO_TITLE="true"
-ENABLE_CORRECTION="true"
-HIST_STAMPS="mm/dd/yyyy"
-HISTFILE=~/.histfil
-HISTSIZE=5000
-SAVEHIST=1000
-ZSH_THEME="powerlevel10k/powerlevel10k"
 
-source $ZSH/oh-my-zsh.sh
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 plugins=(
-  git
-  dotenv
-  docker
-  zsh-autosuggestions
-  thefuck
+    git
+    autoenv
+    zsh-autosuggestions
+    docker
+    thefuck
 )
 
-fpath=(${ASDF_DIR}/completions $fpath)
-. "$HOME/.asdf/asdf.sh"
+source $ZSH/oh-my-zsh.sh
+source $HOME/.cargo/env
+source $HOME/.asdf/asdf.sh
+source $HOME/powerlevel10k/powerlevel10k.zsh-theme
+
+
 
 alias ls="exa --icons"  
+
 autoload -Uz compinit && compinit
 
 if [ -d $HOME/.local/share/oh-my-zsh/plugins ]; then
